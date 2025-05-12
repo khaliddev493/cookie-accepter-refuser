@@ -1,0 +1,110 @@
+ cookies de session
+
+Les cookies de session sont des petits fichiers temporaires stockés dans le navigateur d’un utilisateur pendant une session de navigation sur un site web. Ils permettent au site de suivre les actions de l’utilisateur pendant cette session (comme rester connecté, mémoriser un panier d’achat, ou suivre la navigation entre les pages).
+Caractéristiques des cookies de session 
+
+    Durée de vie limitée  ils sont supprimés automatiquement lorsque le navigateur est fermé.
+
+    Pas stockés de manière persistante sur le disque dur de l’utilisateur.
+
+    Utilisés pour des raisons techniques, comme la gestion de l'authentification ou des sessions utilisateur.
+
+    Sécurité  ils ne contiennent généralement pas d'informations personnelles sensibles, mais un identifiant unique temporaire.
+
+
+
+
+Un cookie persistant (ou cookie permanent)
+
+ est un fichier texte stocké sur le disque dur de l'utilisateur par un site web, qui reste actif même après la fermeture du navigateur. Contrairement aux cookies de session (qui sont supprimés dès que le navigateur est fermé), les cookies persistants ont une date d'expiration définie et peuvent rester sur l'appareil pendant des jours, des mois, voire des années, selon la durée spécifiée par le site web.
+Utilisation des cookies persistants :
+
+    Se souvenir des identifiants de connexion (si l'utilisateur coche "rester connecté")
+
+    Enregistrer les préférences linguistiques
+
+    Suivi du comportement utilisateur à long terme, souvent utilisé à des fins marketing ou publicitaires
+
+
+
+
+cookie de première partie
+ChatGPT a dit :
+
+Un cookie de première partie (ou first-party cookie) est un cookie qui est déposé sur votre navigateur par le site web que vous êtes en train de visiter directement. C’est le contraire d’un cookie de tierce partie (third-party cookie), qui est placé par un domaine différent de celui que vous visitez (généralement pour la publicité ou le suivi inter-sites).
+Exemple :
+
+Si vous visitez example.com :
+
+    Un cookie de première partie aura un domaine comme example.com.
+
+    Un cookie de tierce partie pourrait venir de ad-tracker.com ou analytics-provider.com.
+
+À quoi sert un cookie de première partie ?
+
+Il est souvent utilisé pour :
+
+    Se souvenir de vos préférences de langue ou de thème.
+
+    Maintenir une session utilisateur (ex. : rester connecté).
+
+    Collecter des données analytiques de base (via des outils comme Google Analytics configurés en mode first-party).
+
+
+
+
+Les cookies de tiers (ou third-party cookies en anglais) sont des cookies qui sont placés sur un site web par un domaine différent de celui que l'utilisateur est en train de visiter. Ils sont généralement utilisés par des services externes tels que :
+
+    les annonceurs publicitaires,
+
+    les réseaux sociaux,
+
+    les outils d’analyse du trafic web (comme Google Analytics).
+
+Exemple concret :
+
+Vous visitez le site exemple.com, mais ce site inclut une bannière publicitaire provenant de pub-tracker.com. Si cette bannière dépose un cookie, c’est un cookie de tiers, car il provient de pub-tracker.com et non de exemple.com.
+Utilisations courantes :
+
+    Suivi des utilisateurs d’un site à l’autre pour du ciblage publicitaire.
+
+    Mesure de performance des publicités.
+
+    Fonctionnalités comme les boutons de partage Facebook ou Twitter.
+
+Réglementation :
+
+Depuis le RGPD (Règlement général sur la protection des données) en Europe, l’usage des cookies de tiers est strictement encadré et nécessite souvent le consentement explicite de l’utilisateur.
+
+
+
+
+
+Les cookies "Secure" et "HttpOnly" sont deux attributs de sécurité que l’on peut définir lors de la création d’un cookie. Ils permettent de protéger les données contenues dans les cookies contre certaines attaques, notamment les attaques XSS (Cross-Site Scripting) et MITM (Man-In-The-Middle).
+🔒 Cookie Secure
+
+    Fonction : Indique que le cookie ne doit être envoyé que via une connexion HTTPS.
+
+    But : Évite l'interception du cookie sur une connexion non sécurisée.
+
+    Utilisation :
+
+    Set-Cookie: sessionId=abc123; Secure
+
+    Protection contre : les attaques de type écoute réseau (MITM) sur des connexions non sécurisées.
+
+🚫 Cookie HttpOnly
+
+    Fonction : Rend le cookie inaccessible au JavaScript via document.cookie.
+
+    But : Empêche les scripts malveillants injectés dans la page (XSS) de lire ou de modifier ce cookie.
+
+    Utilisation :
+
+    Set-Cookie: sessionId=abc123; HttpOnly
+
+    Protection contre : les attaques XSS.
+
+🔐 Combinaison des deux
+
+Il est fortement recommandé d’utiliser Secure et HttpOnly ensemble pour les cookies sensibles (ex : session, authentification) :
