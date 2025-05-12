@@ -1,0 +1,35 @@
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+
+ body{
+  background: #171717;
+  height: 100vh;
+ }
+
+
+.banner{
+ 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  width: 40%;
+  margin: auto;
+  padding: 20px ;
+  background: #17a2b8;
+  border-radius: 10px;
+
+}
+
+span{
+  font-size:1.5em ;
+  color: white;
+}
+
+button{
+
+}

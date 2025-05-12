@@ -1,0 +1,23 @@
+
+
+// le syntaxe des cokkies :
+//  document.cookie ="nom=valeur ; expires=DATE ; path=/" ;
+
+
+// Exemple : cookie avec nom et path
+document.cookie = "nom=marc ; path=/";
+
+// Exemple cookie avec une date d'expiration :jours
+
+const dateExpiration = new Date();
+                                                                                                      
+dateExpiration.setTime(dateExpiration.getTime() +(60*24*60*60*1000)) ;
+
+const expireStr = "expires=" + dateExpiration.toUTCString();
+
+document.cookie = "nom=marc; " + expireStr + "; path=/";
+
+
+
+1 Créer une banniérre de gestion de cookie avec accepter/refuser et enregistrer le choix de l'utilisateur via un cookie contenant son nom s'il accepte 
+
